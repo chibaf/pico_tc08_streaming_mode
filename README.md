@@ -12,3 +12,7 @@ usage: python3 stream02.py
 stream03.py: showing temperature from every channel 1~8
 
 usage: python3 stream03.py
+
+stream04.py: showing temperature from every channel 1~8 and saving as csv file
+
+usage: python3 stream04.py filename.csv
