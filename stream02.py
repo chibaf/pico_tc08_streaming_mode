@@ -49,7 +49,8 @@ while True:
       overflow = ctypes.c_int16()
       status["get_temp"] = tc08.usb_tc08_get_temp(chandle, ctypes.byref(temp_buffer), ctypes.byref(times_ms_buffer), 15,ctypes.byref(overflow), 1, 0, 1)
       assert_pico2000_ok(status["get_temp"])
-      print(str(i)+" "+str(status["get_temp"]))
+      print(str(i)+": "+str(status["get_temp"]))
+#      print(str(i)+" "+str(status["get_temp"]))
   except  KeyboardInterrupt:
 # stop unit
     status["stop"] = tc08.usb_tc08_stop(chandle)
