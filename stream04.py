@@ -34,7 +34,7 @@ typeK = ctypes.c_int8(75)
 while True:
   try:
     for i in range(1,9):
-      status["set_channel"] = tc08.usb_tc08_set_channel(chandle, i, typeK)
+      status["set_channel"] = tc08.usb_tc08_set_channel(chandle, i, typeK)  #changing channel
       assert_pico2000_ok(status["set_channel"])
 
 # get minimum sampling interval in ms
